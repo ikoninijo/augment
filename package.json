@@ -1,0 +1,22 @@
+{
+  "name": "safaricad",
+  "version": "1.0.0",
+  "description": "SafariCAD - Professional CAD application for safari and wildlife design",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "npm run install-all && npm run init-db",
+    "init-db": "cd backend && npm run init-db",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start"
+  },
+  "keywords": ["cad", "safari", "design", "react", "node"],
+  "author": "SafariCAD Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
